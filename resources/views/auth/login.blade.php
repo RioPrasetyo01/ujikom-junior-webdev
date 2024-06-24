@@ -1,47 +1,48 @@
-<x-guest-layout>
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+@extends('layouts.auth')
 
-    <form method="POST" action="{{ route('login') }}">
-        @csrf
+<section class="sign-in-page bglogin d-flex justify-content-center align-items-center min-vh-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h1 class="mb-4 text-center">Login</h1>
+                        <p class="text-center">Enter your email address and password.</p>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        @include('layouts.dashboard.alerts.danger-alert')
+
+                        <form class="mt-4" action="{{ route('login') }}" method="POST">
+                            @csrf
+
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input name="email" type="email" class="form-control mb-3" id="exampleInputEmail1" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                {{-- <a href="#" class="float-right">Forgot password?</a> --}}
+                                <input name="password" type="password" class="form-control mb-3" id="exampleInputPassword1" placeholder="Password">
+                            </div>
+                            <div class="d-inline-block w-100">
+                                <div class="custom-control custom-checkbox d-inline-block mt-2 pt-1">
+                                    <input name="remember" type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1">Remember Me</label>
+                                </div>
+                                <button type="submit" class="btn btn-primary float-right">Login</button>
+                            </div>
+                            <div class="sign-info mt-4 text-center">
+                                <span class="dark-color d-inline-block line-height-2">Don't have an account? <a href="{{ route('register') }}">Register</a></span>
+                                <ul class="iq-social-media list-inline mt-3">
+                                    {{-- <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=100030097365361"><i class="ri-facebook-box-line"></i></a></li> --}}
+                                    <li class="list-inline-item"><a href="https://wa.me/085850798627"><i class="ri-whatsapp-line"></i></a></li>
+                                    <li class="list-inline-item"><a href="https://www.instagram.com/rioprasetyo_1"><i class="ri-instagram-line"></i></a></li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-
-            <x-text-input id="password" class="block mt-1 w-full"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
-
-        <!-- Remember Me -->
-        <div class="block mt-4">
-            <label for="remember_me" class="inline-flex items-center">
-                <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
-                <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-            </label>
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            @if (Route::has('password.request'))
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                    {{ __('Forgot your password?') }}
-                </a>
-            @endif
-
-            <x-primary-button class="ms-3">
-                {{ __('Log in') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </div>
+    <style>.bglogin{background-color:#37517e}</style>
+</section>

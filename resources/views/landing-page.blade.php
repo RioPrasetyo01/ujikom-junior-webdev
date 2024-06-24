@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - Arsha Bootstrap Template</title>
+    <title>UJIKOM</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('') }}assets/img/favicon.png" rel="icon">
-    <link href="{{ asset('') }}assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    {{-- <link href="{{ asset('') }}assets/img/favicon.png" rel="icon">
+    <link href="{{ asset('') }}assets/img/apple-touch-icon.png" rel="apple-touch-icon"> --}}
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -37,7 +37,7 @@
             <a href="index.html" class="logo d-flex align-items-center me-auto">
                 <!-- Uncomment the line below if you also wish to use an image logo -->
                 <!-- <img src="assets/img/logo.png" alt=""> -->
-                <h1 class="sitename">Arsha</h1>
+                <h1 class="sitename">EmployeeHub</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
@@ -48,9 +48,6 @@
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
-
-            <a class="btn-getstarted" href="#about">Get Started</a>
-
         </div>
     </header>
 
@@ -64,12 +61,10 @@
                     <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center"
                         data-aos="zoom-out">
                         <h1>Better Solutions For Your Business</h1>
-                        <p>We are team of talented designers making websites with Bootstrap</p>
+                        <p>The best employee list recording application</p>
                         <div class="d-flex">
-                            <a href="#about" class="btn-get-started">Get Started</a>
-                            <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ"
-                                class="glightbox btn-watch-video d-flex align-items-center"><i
-                                    class="bi bi-play-circle"></i><span>Watch Video</span></a>
+                            <a href="{{ route('login') }}" class="btn-get-started">Login</a>
+                            <a href="{{ route('register') }}" class="btn-get-started">Register</a>
                         </div>
                     </div>
                     <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
@@ -80,7 +75,7 @@
 
         </section><!-- /Hero Section -->
 
-        <!-- Clients Section -->
+        {{-- <!-- Clients Section -->
         <section id="clients" class="clients section">
 
             <div class="container" data-aos="zoom-in">
@@ -145,7 +140,7 @@
 
             </div>
 
-        </section><!-- /Clients Section -->
+        </section><!-- /Clients Section --> --}}
 
         <!-- About Section -->
         <section id="about" class="about section">
@@ -161,27 +156,28 @@
 
                     <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore
-                            magna aliqua.
+                            EmployeeHub is a sophisticated web application specifically designed to facilitate employee
+                            data management in your organization. Built with an intuitive interface and rich features,
+                            EmployeeHub ensures employee data management is more efficient and hassle-free.
                         </p>
                         <ul>
-                            <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat.</span></li>
-                            <li><i class="bi bi-check2-circle"></i> <span>Duis aute irure dolor in reprehenderit in
-                                    voluptate velit.</span></li>
-                            <li><i class="bi bi-check2-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea
-                                    commodo</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Add New Employee: Add new employee data
+                                    quickly via an easy-to-use form.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Edit Data: Change employee information at any
+                                    time to ensure data is always up to date.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Delete Data: Securely delete employee data
+                                    that is no longer needed.</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>View All Data: View and search employee data
+                                    with a clear and easy to understand display.</span></li>
                         </ul>
                     </div>
 
                     <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                            laborum. </p>
-                        <a href="#" class="read-more"><span>Read More</span><i
-                                class="bi bi-arrow-right"></i></a>
+                        <p>Why Choose EmployeeHub?
+                            EmployeeHub is not just a data recording tool, but is a comprehensive solution for employee
+                            management that prioritizes convenience and efficiency. Increase your HR team's
+                            productivity, reduce manual errors, and ensure all employee information is always well
+                            organized.</p>
                     </div>
 
                 </div>
@@ -190,7 +186,7 @@
 
         </section><!-- /About Section -->
 
-        <!-- Call To Action Section -->
+        {{-- <!-- Call To Action Section -->
         <section id="call-to-action" class="call-to-action section">
             <img src="{{ asset('') }}assets/img/cta-bg.jpg" alt="">
             <div class="container">
@@ -206,7 +202,7 @@
                     </div>
                 </div>
             </div>
-        </section><!-- /Call To Action Section -->
+        </section><!-- /Call To Action Section --> --}}
 
         <!-- Contact Section -->
         <section id="contact" class="contact section">
@@ -214,7 +210,6 @@
             <!-- Section Title -->
             <div class="container section-title" data-aos="fade-up">
                 <h2>Contact</h2>
-                <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
             </div><!-- End Section Title -->
 
             <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -306,38 +301,35 @@
     <footer id="footer" class="footer">
         <div class="container footer-top">
             <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about">
+                <div class="col-lg-4 col-md-6 mt-2 footer-about">
                     <a href="index.html" class="d-flex align-items-center">
-                        <span class="sitename">Arsha</span>
+                        <span class="sitename">EmployeeHub</span>
                     </a>
                     <div class="footer-contact pt-3">
-                        <p>A108 Adam Street</p>
-                        <p>New York, NY 535022</p>
-                        <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-                        <p><strong>Email:</strong> <span>info@example.com</span></p>
+                        <p>Jln. Wonorejo</p>
+                        <p>Jombang, 61264</p>
+                        <p class="mt-3"><strong>Phone:</strong> <span>08150021000</span></p>
+                        <p><strong>Email:</strong> <span>myemail@gmail.com</span></p>
                     </div>
                 </div>
 
                 <div class="col-lg-4 col-md-12 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Contact</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#hero">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#about">About</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="#contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-4 col-md-12">
                     <h4>Follow Us</h4>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+                    <p>To know more about us, please follow us.</p>
                     <div class="social-links d-flex">
-                        <a href=""><i class="bi bi-twitter-x"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
+                        <a href="https://wa.me/085850798627"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/rioprasetyo_1"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>

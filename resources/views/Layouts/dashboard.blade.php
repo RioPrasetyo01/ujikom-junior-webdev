@@ -2,39 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Modernize Free</title>
-    <link rel="shortcut icon" type="image/png" href="{{ asset('/') }}assets/images/logos/favicon.png" />
-    <link rel="stylesheet" href="{{ asset('/') }}assets/css/styles.min.css" />
-
-    @stack('css')
+    @include('layouts.dashboard._head')
 </head>
 
 <body>
 
-    @include('Layouts.partials.sidebar')
+    <!-- Wrapper Start -->
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        @include('layouts.dashboard.sidebar')
 
-    <main>
-        <!--  Body Wrapper -->
-        <div class="page-wrapper" id="main-wrapper" data-layout="vertical" data-navbarbg="skin6" data-sidebartype="full"
-            data-sidebar-position="fixed" data-header-position="fixed">
-            <!--  Main wrapper -->
-            <div class="body-wrapper">
+        <!-- TOP Nav Bar -->
+        @include('layouts.dashboard.header')
+        <!-- TOP Nav Bar END -->
+
+        <!-- Page Content  -->
+        <div id="content-page" class="content-page">
+            <div class="container-fluid">
                 @yield('content')
             </div>
         </div>
-    </main>
+    </div>
+    <!-- Wrapper END -->
 
-    <script src="{{ asset('/') }}assets/libs/jquery/dist/jquery.min.js"></script>
-    <script src="{{ asset('/') }}assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ asset('/') }}assets/js/sidebarmenu.js"></script>
-    <script src="{{ asset('/') }}assets/js/app.min.js"></script>
-    <script src="{{ asset('/') }}assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-    <script src="{{ asset('/') }}assets/libs/simplebar/dist/simplebar.js"></script>
-    <script src="{{ asset('/') }}assets/js/dashboard.js"></script>
+    <!-- Footer -->
+    @include('layouts.dashboard.footer')
+    <!-- Footer END -->
 
-    @stack('js')
+    <!-- Optional JavaScript -->
+    @include('layouts.dashboard._foot')
+
+    @stack('scripts')
 </body>
 
 </html>
