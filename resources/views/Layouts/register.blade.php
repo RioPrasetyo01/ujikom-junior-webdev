@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>UJIKOM</title>
     <!-- Favicon -->
-    {{-- <link rel="shortcut icon" href="images/logo_2.png" /> --}}
+    <link rel="shortcut icon" href="{{ asset('') }}assets/img/favicon.png" />
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('') }}assets/css/bootstrap.min.css">
     <!-- Typography CSS -->
